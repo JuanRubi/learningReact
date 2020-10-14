@@ -1,17 +1,16 @@
+
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import ReactDom from 'react-dom';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+/*---------------------------
+    First React Component       
+---------------------------*/
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// Need to start with capital to tell React this is a component.
+function Greeting() {
+  return <h4>My first component. This is HTML that is displayed called JSX here.</h4>;
+}
+
+// Displaying our component. root is located in our index.html file 
+ReactDom.render(<Greeting />, document.getElementById('root'));  // (<component/>, locationToDisplay)
+
