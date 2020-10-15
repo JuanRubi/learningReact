@@ -18,7 +18,7 @@ function Greeting() {
   );
 }
 
-/*----------------------------------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
     return RULES:
       - JSX Rules
       - Can only return a single element. Ex: one <div></div>. No limit on what is inside
@@ -28,7 +28,7 @@ function Greeting() {
       - Use className instead of class.
       - Close every element. Even the ones that don't have a closing tag in HTML.
       - Use parentheses in return statement to avoid possible issues.
-----------------------------------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 
 // Creating component to nest inside Greeting component. 
 const InitialGreeting = () => {
