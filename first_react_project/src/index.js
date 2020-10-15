@@ -12,48 +12,26 @@ function BookList() {
       <Book />
       <Book />
       <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
     </section>
   );
 }
 
 // Book Component.
 const Book = () => {
+
+  // NOTE: Works even if variable are declared outside the component.
+  const title = 'The Great Gatsby';
+  const author = 'F. Scott Fitzgerald';
   return (
     <article className="book">
-      <Image></Image>
-      <Title />
-      <Author />
+      <img
+        src="https://images-na.ssl-images-amazon.com/images/I/41iers+HLSL._SY344_BO1,204,203,200_.jpg" alt=""
+      />
+      <h2>{/* Item passed in must return a value. */ title}</h2>
+      <h4>{author.toUpperCase()}</h4>
     </article>
   );
 }
 
-// Book Image Component.
-const Image = () => {
-  return (
-    <img src="https://images-na.ssl-images-amazon.com/images/I/41iers+HLSL._SY344_BO1,204,203,200_.jpg" alt="" />
-  );
-}
-
-// Book Title Component.
-const Title = () => {
-  return (
-    <h2>The Great Gatsby</h2>
-  );
-}
-
-// Book Author Component.
-const Author = () => {
-  return (
-    <h4>F. Scott Fitzgerald</h4>
-  );
-}
-
-
+// Display the book list.
 ReactDOM.render(<BookList />, document.getElementById('root'));
