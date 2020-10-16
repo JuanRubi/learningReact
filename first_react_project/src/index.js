@@ -5,29 +5,9 @@ import ReactDOM from 'react-dom';
 // CSS
 import './index.css';   // Full address to CSS file.
 
-// Array of book objects.
-const books = [
-  {
-    id: 1,
-    image: 'https://images-na.ssl-images-amazon.com/images/I/41iers+HLSL._SY344_BO1,204,203,200_.jpg',
-    title: 'The Great Gatsby',
-    author: 'F. Scott Fitzgerald'
-  },
-
-  {
-    id: 2,
-    image: 'https://images-na.ssl-images-amazon.com/images/I/51WSrYIgO3L._SX329_BO1,204,203,200_.jpg',
-    title: 'Dead Men Do Tell Tales',
-    author: 'William R. Maples'
-  },
-
-  {
-    id: 3,
-    image: 'https://images-na.ssl-images-amazon.com/images/I/51NoqhM4r9L._SX407_BO1,204,203,200_.jpg',
-    title: 'Data Structures and Algorithms',
-    author: 'Robert Lafore'
-  }
-];
+// Importing other JS files
+import { books } from './books';  // {name of what is being exported in other file}
+import Book from './Book';  // default export format: can name how you'd like
 
 // BookList Component. 
 function BookList() {
@@ -36,24 +16,11 @@ function BookList() {
       {books.map((book) => {
         return (
           // key must be a unique value.
-          <Book key={book.id} bookProp={book}></Book>
+          // {...book} spreads all the book properties on props
+          <Book key={book.id} {...book}></Book>
         );
       })}
     </section>
-  );
-}
-
-// Book Component.
-const Book = (props) => {
-  // Object destructuring. Can also do this in parameters section.
-  const { image, title, author } = props.bookProp;
-
-  return (
-    <article className="book">
-      <img src={image} alt="" />
-      <h2>{title}</h2>
-      <h4>{author}</h4>
-    </article>
   );
 }
 
