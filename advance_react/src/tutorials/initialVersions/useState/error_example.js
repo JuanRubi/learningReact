@@ -1,5 +1,6 @@
 /*--------------------------------------------------------------------------------------- 
-
+    GOAL: To showcase how once the title is changed, it can't be changed back. A
+          problem that useState can fix.
 ----------------------------------------------------------------------------------------*/
 
 import React from 'react'

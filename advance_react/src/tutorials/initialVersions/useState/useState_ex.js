@@ -20,7 +20,7 @@ const UseStateBasics = () => {
 
 
     /*------------------------------
-        Using destructuring.
+        Destructuring Method.
     ------------------------------*/
     //[variableName, functionName]  Convention: functionName == setvariableName
     const [nameGiven, setnameGiven] = useState("Random Title");
