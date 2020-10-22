@@ -1,5 +1,5 @@
 import React from 'react';
-import Setup from './tutorials/initialVersions/useState_array'
+import Setup from './tutorials/initialVersions/useState_object'
 import './App.css';
 
 function App() {
