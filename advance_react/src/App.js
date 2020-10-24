@@ -1,5 +1,5 @@
 import React from 'react';
-import Setup from './tutorials/initialVersions/conditonalRendering/short_circuit';
+import Setup from './tutorials/initialVersions/conditonalRendering/show_hide';
 import './App.css';
 
 function App() {
