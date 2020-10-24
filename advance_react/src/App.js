@@ -1,5 +1,5 @@
 import React from 'react';
-import Setup from './tutorials/initialVersions/forms/controlled_inputs';
+import Setup from './tutorials/initialVersions/forms/multiple_inputs';
 import './App.css';
 
 function App() {
