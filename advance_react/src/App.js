@@ -1,5 +1,5 @@
 import React from 'react';
-import Setup from './tutorials/initialVersions/conditonalRendering/multiple_returns';
+import Setup from './tutorials/initialVersions/conditonalRendering/short_circuit';
 import './App.css';
 
 function App() {

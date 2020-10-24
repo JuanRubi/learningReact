@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------------
     GOAL: To showcase conditional rendering. Displaying different components based
-          on conditions.
+          on conditions and fetch data recieved.
 ----------------------------------------------------------------------------------------*/
 
 import React, { useState, useEffect } from 'react';
@@ -33,7 +33,7 @@ const MultipleReturns = () => {
             .catch(error => console.log(error));    // Only catches network errors.
     }, []);
 
-    // Displayed if isLoading is true.
+    // Displayed if still loading.
     if (isloading) {
         return (
             <>
@@ -42,7 +42,7 @@ const MultipleReturns = () => {
         );
     }
 
-    // Displayed if isError is true.
+    // Displayed if error occurred.
     if (isError) {
         return (
             <>
@@ -51,7 +51,7 @@ const MultipleReturns = () => {
         );
     }
 
-    // Default component that is displayed.
+    // Default component displayed.
     return (
         <>
             <h1>{user}</h1>
