@@ -1,0 +1,59 @@
+
+/*------------------   Master Styles   ------------------*/
+
+body {
+  background-color: #ffff88;
+  margin: 2rem auto;
+}
+
+/*--------------------    App Styles    -----------------*/
+.birthdayList {
+  width: 45%;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px #ccc;
+  margin: 0 auto;
+}
+
+h3 {
+  color: #001964;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+.person {
+  width: 95%;
+  display: flex;
+
+  margin: 1rem auto;
+}
+
+img {
+  width: 7rem;
+  border-radius: 4rem;
+}
+
+h4 {
+  color: #002183;
+  margin-top: 2rem;
+  margin-left: 0.7rem;
+}
+
+p {
+  color: #002183;
+  margin-top: -1rem;
+  margin-left: 0.7rem;
+}
+
+button {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  width: 90%;
+  height: 2rem;
+
+  background-color: royalblue;
+  color: #ffff88;
+  border: 1px solid #ffff88;
+  margin: 1rem 1.4rem;
+}
+
+
