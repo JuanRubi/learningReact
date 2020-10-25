@@ -1,3 +1,6 @@
+/*----------------------------------------------------------------------------------------
+  Goal: To create a birthday reminder app with the use of useState hook in React.
+----------------------------------------------------------------------------------------*/
 
 import React, { useState } from 'react';
 import './App.css';
@@ -11,7 +14,7 @@ function App() {
     <section className="birthdayList">
       <h3>{people.length} birthdays today</h3>
       <List people={people} />
-      <button onClick={() => console.log("Clicked!")}>Clear All</button>
+      <button onClick={() => setPeople([])}>Clear All</button>
     </section>
   );
 }

@@ -53,6 +53,7 @@ button {
   background-color: royalblue;
   color: #ffff88;
   border: 1px solid #ffff88;
+  outline: none;
   margin: 1rem 1.4rem;
 }
 
