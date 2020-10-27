@@ -1,5 +1,5 @@
 /*---------------------------------------------------------------------------------------
-    GOAL: To show the basics of setting and using the useRef hook in React.
+    GOAL: To create to modal content to be displayed once an item is submitted.
 ----------------------------------------------------------------------------------------*/
 
 import React, { useEffect } from 'react';
