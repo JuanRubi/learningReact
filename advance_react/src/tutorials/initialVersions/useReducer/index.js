@@ -1,14 +1,30 @@
 /*---------------------------------------------------------------------------------------
-    GOAL: To show the basics of setting and using the useRef hook in React.
+    GOAL: To show the basics of setting and using the useReducer hook in React.
 ----------------------------------------------------------------------------------------*/
 
 import React, { useState, useReducer } from 'react';
 import Modal from './Modal';
 import { data } from '../../../data';
 
-// reducer function
+// reducer function, always want to return a state.
 const reducer = (state, action) => {
+    if (action.type === "ADD_ITEM") {
+        const newPeople = [...state.people, action.payload];
 
+        return {
+            // Copy all previous values and change the ones you want.
+            ...state,
+            people: newPeople,
+            isModalOpen: true,
+            modalContent: "Item Added"
+        };
+    }
+
+    if (action.type === "NO_VALUE") {
+        return { ...state, isModalOpen: true, modalContent: "Please enter a value." };
+    }
+
+    throw new Error("No matching action type");
 };
 
 // Initial state.
@@ -37,10 +53,15 @@ const Index = () => {
         e.preventDefault();
 
         if (name) {
+            const newItem = { id: new Date().getTime().toString(), name };
+            // Dispatching our action. 
+            dispatch({ type: "ADD_ITEM", payload: newItem });   // Pass in object with property 'type'.
 
+            // Set value back to empty.
+            setName("");
         }
         else {
-
+            dispatch({ type: "NO_VALUE" });
         }
     };
 
