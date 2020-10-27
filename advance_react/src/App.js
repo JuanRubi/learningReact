@@ -1,5 +1,5 @@
 import React from 'react';
-import Setup from './tutorials/initialVersions/useRef/useRef_basics';
+import Setup from './tutorials/initialVersions/useReducer';
 import './App.css';
 
 function App() {
