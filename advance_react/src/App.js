@@ -1,5 +1,5 @@
 import React from 'react';
-import Setup from './tutorials/initialVersions/prop_drilling/prop_drilling';
+import Setup from './tutorials/initialVersions/useContext/context_api';
 import './App.css';
 
 function App() {
