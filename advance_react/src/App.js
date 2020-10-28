@@ -1,5 +1,5 @@
 import React from 'react';
-import Setup from './tutorials/initialVersions/custom_hooks/fetch_example';
+import Setup from './tutorials/initialVersions/prop_types';
 import './App.css';
 
 function App() {
