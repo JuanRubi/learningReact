@@ -1,5 +1,5 @@
 import React from 'react';
-import Setup from './tutorials/initialVersions/useContext/context_api';
+import Setup from './tutorials/initialVersions/custom_hooks/fetch_example';
 import './App.css';
 
 function App() {
