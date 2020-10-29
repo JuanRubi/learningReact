@@ -1,5 +1,5 @@
 /*---------------------------------------------------------------------------------------
-    GOAL: To gather the products data for Product.js file.
+    GOAL: To create component displaying error message if page doesn't exist.
 ----------------------------------------------------------------------------------------*/
 
 import React from 'react';
@@ -9,6 +9,8 @@ const Error = () => {
     return (
         <div>
             <h1>Error Page</h1>
+
+            <Link to="/" className="btn">Home</Link>
         </div>
     );
 };

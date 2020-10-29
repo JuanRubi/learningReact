@@ -1,5 +1,5 @@
 /*---------------------------------------------------------------------------------------
-    GOAL: To gather the products data for Product.js file.
+    GOAL: To create component containing the people in the data.
 ----------------------------------------------------------------------------------------*/
 
 import React, { useState } from 'react';
@@ -17,6 +17,9 @@ const People = () => {
                 return (
                     <div key={person.id} className="item">
                         <h4>{person.name}</h4>
+                        <Link to={`/person/${person.id}`}>
+                            Read More
+                        </Link>
                     </div>
                 );
             })}

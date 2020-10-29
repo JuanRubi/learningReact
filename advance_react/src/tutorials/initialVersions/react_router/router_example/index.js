@@ -1,5 +1,5 @@
 /*---------------------------------------------------------------------------------------
-    GOAL: To gather the products data for Product.js file.
+    GOAL: To showcase how react router can be used to create multi-page sites.
 ----------------------------------------------------------------------------------------*/
 
 import React from 'react';
@@ -22,19 +22,30 @@ const ReactRouterSetup = () => {
     // Wrap all the return in <Router>. In actual project wrap the entire application.
     return (
         <Router>
-            {/* exact - makes component/page display only when the url matches exactly
+            <Navbar />
+
+            <Switch /* Only the first path that matches get displayed. */>
+                {/* exact - makes component/page display only when the url matches exactly
                         preventing multiple pages from displaying at once. */}
-            <Route exact path="/" /* / - means domain (home page) */>
-                <Home />
-            </Route>
+                <Route exact path="/" /* / - means domain (home page) */>
+                    <Home />
+                </Route>
 
-            <Route path="/about" /* /name - where name is arbitrary*/>
-                <About />
-            </Route>
+                <Route path="/about" /* /name - where name is arbitrary*/>
+                    <About />
+                </Route>
 
-            <Route path="/people" /* /name - where name is arbitrary*/>
-                <People />
-            </Route>
+                <Route path="/people" /* /name - where name is arbitrary*/>
+                    <People />
+                </Route>
+
+                {/* /name/:urlParameters - the beginning is up to you '/name/' portion */}
+                <Route path="/person/:id" children={<Person />} ></Route>
+
+                <Route path="*" /* * - means it always matches */>
+                    <Error />
+                </Route>
+            </Switch>
         </Router>
     );
 };

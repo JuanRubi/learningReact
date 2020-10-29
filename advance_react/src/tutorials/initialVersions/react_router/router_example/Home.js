@@ -1,5 +1,5 @@
 /*---------------------------------------------------------------------------------------
-    GOAL: To gather the products data for Product.js file.
+    GOAL: To create component containing home page.
 ----------------------------------------------------------------------------------------*/
 
 import React from 'react';
