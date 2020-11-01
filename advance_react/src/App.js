@@ -1,5 +1,5 @@
 import React from 'react';
-import Setup from './tutorials/initialVersions/react_router/router_example';
+import Setup from './tutorials/initialVersions/memo_useMemo_useCallback';
 import './App.css';
 
 function App() {
