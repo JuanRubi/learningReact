@@ -1,5 +1,5 @@
 /*---------------------------------------------------------------------------------------
-    GOAL: To showcase how react router can be used to create multi-page sites.
+    GOAL: To showcase memo function, useMemo, and useCallback hooks in react.
 ----------------------------------------------------------------------------------------*/
 
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
@@ -8,14 +8,29 @@ import { useFetch } from '../custom_hooks/useFetch';
 const url = "https://course-api.netlify.app/api/javascript-store-products";
 // Every time props or state changes, the component re-renders.
 
+const calculateMostExpensive = (data) => {
+    return data.reduce((total, item) => {
+        const price = item.fields.price;
+
+        if (price >= total) {
+            total = price;
+        }
+
+        return total;
+    }, 0) / 100;
+};
+
 const Index = () => {
     const { products } = useFetch(url);
     const [count, setCount] = useState(0);
     const [cart, setCart] = useState(0);
 
-    const addToCart = () => {
+    // addToCart function triggers re-render which can be fixed with useCallback.
+    const addToCart = useCallback(() => {
         setCart(cart + 1);
-    };
+    }, [cart]);
+
+    const mostExpensive = useMemo(() => calculateMostExpensive(products, [products]));
 
     return (
         <>
@@ -25,6 +40,7 @@ const Index = () => {
             </button>
 
             <h1 style={{ marginTop: "3rem" }}> Cart: {cart}</h1>
+            <h1>Most Expensive: ${mostExpensive}</h1>
             <BigList products={products} addToCart={addToCart} />
         </>
     );
@@ -59,7 +75,7 @@ const SingleProduct = ({ fields, addToCart }) => {
             <img src={image} alt={name} />
             <h4>{name}</h4>
             <p>${price}</p>
-            <button onClick={addToCart}>Add To Cart</button>
+            <button onClick={addToCart}>Add To Ca rt</button>
         </article>
     );
 };
