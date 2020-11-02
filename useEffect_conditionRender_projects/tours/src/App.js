@@ -55,7 +55,7 @@ function App() {
       <main>
         <div className="title">
           <h2>No Tours Left</h2>
-          <button className="btn" onClick={() => fetchTours()}>Show Tours</button>
+          <button className="show_tours" onClick={() => fetchTours()}>Show Tours</button>
         </div>
       </main>
     )
