@@ -1,38 +1,55 @@
+
+/*-----------------------   Master Styles   -----------------------*/
+body {
+  width: 100%;
+
+  margin: 1rem;
+}
+
+/*-------------------------   App Styles    -----------------------*/
+
+#root {
+  width: 95%;
+  max-width: 700px;
+
+  margin: 0 auto;
+  text-align: center;
+
+  border: 1px solid black;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  font-size: 1.4rem;
+  color: #000088;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*-------------------   Tour Component Styles   -------------------*/
+img {
+  width: 100%;
+  height: 25rem;
+
+  object-fit: cover;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.tour_info {
+  width: 70%;
+  font-size: 1.2rem;
+
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  float: right;
+  margin-top: 0.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.tour_price {
+  color: #0077ff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer p {
+  display: inline-block;
+  text-align: left;
 }

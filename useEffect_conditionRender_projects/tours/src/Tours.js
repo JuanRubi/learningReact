@@ -4,6 +4,7 @@
 
 import React from 'react';
 import Tour from './Tour';
+import './App.css';
 
 const Tours = ({ tours, removeTour }) => {
     return (

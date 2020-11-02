@@ -5,6 +5,7 @@
 import React, { useState, useEffect } from 'react';
 import Loading from './Loading';
 import Tours from './Tours';
+import './App.css';
 
 const url = "https://course-api.netlify.app/api/react-tours-project";
 
@@ -39,6 +40,7 @@ function App() {
     fetchTours();
   }, []);
 
+  // Displayed if loading page.
   if (loading) {
     return (
       <main>
@@ -47,6 +49,7 @@ function App() {
     );
   }
 
+  // Displayed if no tours are left.
   if (tours.length === 0) {
     return (
       <main>
@@ -58,6 +61,7 @@ function App() {
     )
   }
 
+  // Default component displayed.
   return (
     <main>
       <Tours tours={tours} removeTour={removeTour} />

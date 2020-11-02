@@ -3,10 +3,12 @@
 ----------------------------------------------------------------------------------------*/
 
 import React, { useState } from 'react';
+import './App.css';
 
 const Tour = ({ id, image, info, price, name, removeTour }) => {
     const [readMore, setReadMore] = useState(false);
 
+    // Displaying main structure of each tour.
     return (
         <article className="single_tour">
             <img src={image} alt={name} />
