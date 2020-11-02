@@ -1,7 +1,27 @@
 /*----------------------------------------------------------------------------------------
-    GOAL: To showcase how we can use our controlled inputs to add them to a list.
+    GOAL: To create the component containing the avaiable tours.
 ----------------------------------------------------------------------------------------*/
 
+import React from 'react';
+import Tour from './Tour';
 
+const Tours = ({ tours }) => {
+    return (
+        <section>
+            <div className="title">
+                <h2>Tours Component</h2>
+                <div className="underline"></div>
+            </div>
 
+            <div>
+                {tours.map((tour) => {
+                    return (
+                        <Tour key={tour.id} {...tour}></Tour>
+                    )
+                })}
+            </div>
+        </section>
+    );
+};
 
+export default Tours;

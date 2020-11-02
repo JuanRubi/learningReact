@@ -1,6 +1,15 @@
 /*----------------------------------------------------------------------------------------
-    GOAL: To showcase how we can use our controlled inputs to add them to a list.
+    GOAL: To create component displayed when loading data onto page.
 ----------------------------------------------------------------------------------------*/
 
+import React from 'react';
 
+const Loading = () => {
+    return (
+        <div className="loading">
+            <h1>Loading...</h1>
+        </div>
+    );
+};
 
+export default Loading;
