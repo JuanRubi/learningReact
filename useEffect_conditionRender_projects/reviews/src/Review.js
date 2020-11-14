@@ -53,7 +53,7 @@ const Review = () => {
             <p className="job">{job}</p>
             <p className="info">{text}</p>
 
-            <div className="button_contatiner">
+            <div className="button_container">
                 <button className="prev_btn" onClick={prevPerson}>
                     <FaChevronLeft />
                 </button>
