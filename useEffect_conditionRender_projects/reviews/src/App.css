@@ -73,6 +73,7 @@ img {
   color: #0099ff;
   background-color: #fff;
   border: none;
+  outline: none;
 }
 
 .next_btn {
@@ -80,12 +81,22 @@ img {
   color: #0099ff;
   background-color: #fff;
   border: none;
+  outline: none;
 }
 
 .random_btn {
   font-size: 1rem;
   color: #0099ff;
   border: none;
+  outline: none;
+
+  display: block;
+  margin: 0.5rem auto;
+}
+
+.random_btn:hover {
+  background-color: #bee5ff;
+  border: 1px solid #acdeff;
 }
 
 
